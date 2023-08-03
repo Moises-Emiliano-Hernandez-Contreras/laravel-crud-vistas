@@ -42,8 +42,8 @@
                     {{$empleado['cargo']}}
                 </td>
                 <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2"><i class="fa-solid fa-pen-to-square fa-xl"></i></a>
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"><i class="fa-solid fa-trash fa-xl"></i></a>
                 </td>
             </tr>
             @endforeach

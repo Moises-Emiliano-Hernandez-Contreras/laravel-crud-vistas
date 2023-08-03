@@ -14,4 +14,5 @@ use App\Http\Controllers\EmpleadosController;
 |
 */
 
+Route::post('/add', [EmpleadosController::class,"agregarEmpleados"]);
 Route::get('/', [EmpleadosController::class,"listarEmpleados"]);
