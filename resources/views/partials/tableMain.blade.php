@@ -46,7 +46,7 @@
                 <td class="px-6 py-4 flex">
                 @csrf
                 <!-- <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2"><i class="fa-solid fa-pen-to-square fa-xl"></i></a>                                                 -->
-                <button data-modal-target="defaultModalEdit" data-modal-toggle="defaultModalEdit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-3" type="button"><i class="fa-solid fa-pen-to-square fa-xl"></i></button>
+                <button id="editing" data-modal-target="{{'defaultModalEdit'.$empleado->id}}" data-modal-toggle="{{'defaultModalEdit'.$empleado->id}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-3" type="button" data-proposito="<?php echo $empleado; ?>"><i class="fa-solid fa-pen-to-square fa-xl"></i></button>
                 @include("partials.modalEdit")
                 <form method="POST" action='{{ url("delete/{$empleado->id}") }}'>
                     @csrf

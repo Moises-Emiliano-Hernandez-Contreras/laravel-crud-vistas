@@ -26,4 +26,14 @@ class EmpleadosController extends Controller
         $empleado->delete();
         return redirect("/");        
     }
+    public function editEmpleado(Request $request){
+        $empleado=Empleados::find($request->id);
+        $empleado->nombre=$request->nombre; 
+        $empleado->edad=$request->edad; 
+        $empleado->genero=$request->genero; 
+        $empleado->matricula=$request->mat; 
+        $empleado->cargo=$request->cargo; 
+        $empleado->save();    
+        return redirect("/");                 
+    }
 }
