@@ -14,5 +14,7 @@ use App\Http\Controllers\EmpleadosController;
 |
 */
 
-Route::post('/add', [EmpleadosController::class,"agregarEmpleados"]);
 Route::get('/', [EmpleadosController::class,"listarEmpleados"]);
+Route::post('/add', [EmpleadosController::class,"agregarEmpleados"]);
+//Route::delete('/del/{id}', [EmpleadosController::class,"borrarEmpleado"]);
+Route::delete('delete/{id}', [EmpleadosController::class,"borrarEmpleado"])->name('employed.destroy');

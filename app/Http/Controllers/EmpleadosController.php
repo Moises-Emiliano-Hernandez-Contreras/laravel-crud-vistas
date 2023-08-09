@@ -22,8 +22,8 @@ class EmpleadosController extends Controller
         return redirect("/");
     }
     public function borrarEmpleado(Request $request){
-        $empleado=Empleados::findOrFail($request->id);
-        $empleado->destroy();
-        return redirect("/");
+        $empleado=Empleados::find($request->id);
+        $empleado->delete();
+        return redirect("/");        
     }
 }
